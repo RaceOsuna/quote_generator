@@ -10,11 +10,6 @@ function getRandomQuote() {
   author.textContent = `${newQuote.author}` || "-Unknown";
 }
 
-// function setQuoteAndAuthorText(quoteObj) {
-//   quote.innerText = quoteObj.text
-//   author.innerText = quoteObj.author
-// }
-
 async function getQuotes() {
   const apiUrl = "https://jacintodesign.github.io/quotes-api/data/quotes.json";
   try {
@@ -32,6 +27,7 @@ function tweetQuote() {
   window.open(twitterUrl, '_blank')
 }
 
+//Event Listeners
 getQuoteButton.addEventListener('click', getRandomQuote)
 twitterButton.addEventListener('click', tweetQuote)
 
